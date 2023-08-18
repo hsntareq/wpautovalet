@@ -4,6 +4,7 @@
 DB_USER="root"
 DB_PASS="root"
 
+
 # Ask for a directory name
 read -p "Enter the directory name for WordPress installation: " DIR_NAME
 
@@ -52,10 +53,15 @@ PHP
 wp core install --url=https://$DIR_NAME.test --title="$SITE_NAME" --admin_user="$ADMIN_USER" --admin_password="$ADMIN_PASS" --admin_email=admin@example.com
 
 # Open the directory in Visual Studio Code
-# code $INSTALL_DIR
+if [[ "$1" == "-v" ]]; then
+    code $INSTALL_DIR
+fi
+
 
 # Open the login page with pre-filled username and password
-# open "https://$DIR_NAME.test/wp-login.php?username=$ADMIN_USER&password=$ADMIN_PASS"
+if [[ "$1" == "-w" ]]; then
+	open "https://$DIR_NAME.test/wp-login.php?username=$ADMIN_USER&password=$ADMIN_PASS"
+fi
 
 # Provide a message indicating the process is complete
 echo "WordPress installation and database creation complete. Your site is now secured with HTTPS in $INSTALL_DIR. Visual Studio Code is now open for editing. The login page is also opened in your default web browser with pre-filled username and password."
