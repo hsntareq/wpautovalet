@@ -1,4 +1,4 @@
-# wpautovalet Instructions
+# 1. wpautovalet Instructions
 
 To use **wpautovalet**, make sure you have both Valet and MySQL installed on your machine. Additionally, ensure you have a `~/sites` directory set up for proper functioning.
 
@@ -43,5 +43,10 @@ Here are the steps to create and manage your WordPress project:
 
 
 Make sure to replace `path-to-your-directory` with the actual path to your project directory.
+
+
+# 2. wpautovalet Instructions. Quick Delete mysql database & instance if same prefix
+
+
 
 Happy WordPress development with wpautovalet!
