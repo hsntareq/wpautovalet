@@ -55,8 +55,8 @@ PHP
 # Install WordPress
 wp core install --url=https://$DIR_NAME.test --title="$SITE_NAME" --admin_user="$ADMIN_USER" --admin_password="$ADMIN_PASS" --admin_email=admin@example.com
 
-code $INSTALL_DIR
-open "https://$DIR_NAME.test/wp-login.php?username=$ADMIN_USER&password=$ADMIN_PASS"
+# code $INSTALL_DIR
+# open "https://$DIR_NAME.test/wp-login.php?username=$ADMIN_USER&password=$ADMIN_PASS"
 
 # Open the directory in Visual Studio Code
 if [[ $FLAG1 == "-v" ]]; then
