@@ -1,5 +1,8 @@
 #!/bin/bash
 
+FLAG1=$1
+FLAG2=$2
+
 # MySQL root credentials
 DB_USER="root"
 DB_PASS="root"
@@ -52,16 +55,20 @@ PHP
 # Install WordPress
 wp core install --url=https://$DIR_NAME.test --title="$SITE_NAME" --admin_user="$ADMIN_USER" --admin_password="$ADMIN_PASS" --admin_email=admin@example.com
 
+code $INSTALL_DIR
+open "https://$DIR_NAME.test/wp-login.php?username=$ADMIN_USER&password=$ADMIN_PASS"
+
 # Open the directory in Visual Studio Code
-if [[ "$1" == "-v" ]]; then
+if [[ $FLAG1 == "-v" ]]; then
     code $INSTALL_DIR
 fi
 
 
 # Open the login page with pre-filled username and password
-if [[ "$1" == "-w" ]]; then
+if [[ $FLAG2 == "-b" ]]; then
 	open "https://$DIR_NAME.test/wp-login.php?username=$ADMIN_USER&password=$ADMIN_PASS"
 fi
 
 # Provide a message indicating the process is complete
-echo "WordPress installation and database creation complete. Your site is now secured with HTTPS in $INSTALL_DIR. Visual Studio Code is now open for editing. The login page is also opened in your default web browser with pre-filled username and password."
+echo "WordPress installation and database creation complete. Your site is now secured with HTTPS in $INSTALL_DIR. Visit - https://$DIR_NAME.test/wp-login.php?username=$ADMIN_USER&password=$ADMIN_PASS".
+echo "Visual Studio Code is now open for editing. The login page is also opened in your default web browser with pre-filled username and password."

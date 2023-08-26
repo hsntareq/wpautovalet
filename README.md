@@ -6,47 +6,40 @@ Before running the script, don't forget to update the `DB_USER` and `DB_PASS` fi
 
 Here are the steps to create and manage your WordPress project:
 
-
 1. **To create the project**:
 
-	Open a terminal and navigate to your project directory, then run:
+   Open a terminal and navigate to your project directory, then run:
 
-	```
-	path-to-your-directory/wpmake.sh
-	```
-
+   ```
+   path-to-your-directory/wpmake.sh
+   ```
 
 2. **To create the project and open it in Visual Studio Code (VSCode)**:
 
-	Run the following command in your terminal:
+   Run the following command in your terminal:
 
-	```
-	path-to-your-directory/wpmake.sh -v
-	```
-
+   ```
+   path-to-your-directory/wpmake.sh -v
+   ```
 
 3. **To create the project and open the WordPress admin page in your browser**:
 
-	Run the following command in your terminal:
+   Run the following command in your terminal:
 
-	```
-	path-to-your-directory/wpmake.sh -a
-	```
-
+   ```
+   path-to-your-directory/wpmake.sh -b
+   ```
 
 4. **To combine steps 2 and 3 (create project, open in VSCode, and open admin page)**:
 
-	Execute the following additional command:
-	```
-	path-to-your-directory/wpmake.sh -v -a
-	```
+   Execute the following additional command:
 
+   ```
+   path-to-your-directory/wpmake.sh -v -b
+   ```
 
 Make sure to replace `path-to-your-directory` with the actual path to your project directory.
 
-
 # 2. wpautovalet Instructions. Quick Delete mysql database & instance if same prefix
-
-
 
 Happy WordPress development with wpautovalet!
