@@ -54,7 +54,7 @@ wp core install --url=https://$DIR_NAME.test --title="$SITE_NAME" --admin_user="
 
 # Open the directory in Visual Studio Code
 if [[ "$1" == "-v" ]]; then
-    code $INSTALL_DIR
+    # code $INSTALL_DIR
 fi
 
 
